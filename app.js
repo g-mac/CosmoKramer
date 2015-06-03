@@ -21,8 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// we are specifying the html directory as another public directory
-app.use(express.static(path.join(__dirname, 'html')));
+app.use(express.static(path.join(__dirname, 'html'))); // specify html directory as another public directory
 
 app.use('/', routes);
 app.use('/users', users);

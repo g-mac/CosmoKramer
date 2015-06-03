@@ -3,7 +3,6 @@ var router = express.Router();
 // a convenient variable to refer to the HTML directory
 var html_dir = './html/';
 
-
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
@@ -14,8 +13,8 @@ router.get('/helloworld', function (req, res) {
     res.render('helloworld', {title: 'Hello, Simon!'})
 });
 
-// routes to serve the static HTML files
-router.get('/test', function(req, res) {
+/* GET HTML test page. */
+router.get('/test', function(req, res) { // routes to serve the static HTML files
     res.sendfile(html_dir + 'test.html');
 });
 
